@@ -12,15 +12,15 @@ class Demo extends Controller
         $config = [
             //必填---------
             //小程序appid
-            'appid' => 'wxf2095e9e90b61d19',
+            'appid' => '',
             //商户号
-            'mch_id' => '1504272751',
+            'mch_id' => '',
             //支付回调地址
-            'notify_url' => 'https://m.bingboo.cn/fuel/pay/info',
+            'notify_url' => 'https://xxxxx/info',
             //下单用户openid
-            'openid' => 'oJm6p5QlKGB9HHbC1KSA1AL48uEo',
+            'openid' => '',
             //支付32位密钥
-            'key' => 'ixXLggKHIwgSor9uBhjpSjrQeat0THYK',
+            'key' => '',
             //--------------
 
             //非必填,如需修改则填入即可------------
@@ -53,7 +53,7 @@ class Demo extends Controller
     public function info()
     {
         $post_xml = file_get_contents('php://input');
-        $key = 'ixXLggKHIwgSor9uBhjpSjrQeat0THYK';
+        $key = '';
         $result = MiniPay::check($post_xml, $key);
         if ($result) {
             //处理逻辑
